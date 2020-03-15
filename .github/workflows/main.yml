@@ -8,8 +8,8 @@ jobs:
       - uses: actions/checkout@v1
       - uses: ./saucelabs-action
         with:
-          APK_PATH: ""
-          TEST_APK_PATH: ""
+          APK_PATH: "app"
+          TEST_APK_PATH: "app test"
           DATA_CENTER: "eu-central-1"
           DEVICE_NAME: "Google Pixel GoogleAPI Emulator,platformVersion=7.0"
         env:
