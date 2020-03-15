@@ -22,7 +22,7 @@ Testing mobile applications can be a challenge. With Sauce Labs, testing becomes
 
 1. `Sauce Labs Access Key`: A service account is a special kind of account with specific permissions to authenticate with the Cloud Platform when used on a virtual machine for continuous integration.
 
-2. `ARG SPEC File`: A YAML argument file that lists out all of the configurations for Firebase Test Lab. In this file, you can specify the test APK, filter the tests, select virtual or physical devices and indicate the type of test to perform.
+2. `ARG SPEC File`: A YAML argument file that lists out all of the configurations for Sauce Labs Runner. In this file, you can specify the APK, test APK , select virtual devices , the data center location and indicate the type of test to perform.
 
 
 <br>
@@ -44,22 +44,20 @@ jobs:
       - name: Run tests on Sauce Labs
         uses: moatazeldebsy/sauce-labs-app-automate-action@v1.0
         with:
-          arg-spec: 'tests.yml:android-pixel-4'
+          arg-spec: 'tests.yml:android'
         env:
-          SAUCE_LABS_ACCESS_KEY: ${{ secrets.SERVICE_ACCOUNT }}
+          SAUCE_LABS_USERNAME: ${{ secrets.SAUCE_LABS_USERNAME }}
+          SAUCE_LABS_ACCESSKEY: ${{ secrets.SAUCE_LABS_ACCESSKEY }}
 ```
 
 tests.yml:
 ```
-android-pixel-4:
-  type: instrumentation
-  app: app-debug.apk
-  test: app-debug-test.apk
-  device:
-    - model: flame
-      version: 29
-      locale: 'en'
-      orientation: portrait
+android:
+  app: $BITRISE_APK_PATH
+  test: $BITRISE_TEST_APK_PATH
+  saucelabs_data_center: {saucelabs_data_center}
+  saucelabs_device_name: ${saucelabs_device_name}
+
 ```
 
 <br>
