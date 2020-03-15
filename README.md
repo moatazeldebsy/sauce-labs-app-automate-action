@@ -8,7 +8,7 @@ A GitHub Action to test mobile applications (Android) using Sauce Labs App Autom
 
 <br>
 
-Inspired by the 2020 [GitHub Actions Hackathon.]()
+Inspired by the 2020 [GitHub Actions Hackathon.](https://githubhackathon.com/)
 
 <br>
 
@@ -23,7 +23,6 @@ Testing mobile applications can be a challenge. With Sauce Labs, testing becomes
 1. `Sauce Labs Access Key`: A service account is a special kind of account with specific permissions to authenticate with the Cloud Platform when used on a virtual machine for continuous integration.
 
 2. `ARG SPEC File`: A YAML argument file that lists out all of the configurations for Sauce Labs Runner. In this file, you can specify the APK, test APK , select virtual devices , the data center location and indicate the type of test to perform.
-
 
 <br>
 

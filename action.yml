@@ -1,15 +1,33 @@
-name: 'Firebase Test Lab Action'
-description: 'A GitHub Action to test mobile applications (Android) using Sauce Lab.'
-author: 'Moataz Nabil'
+name: "Sauce Labs "
+description: "Greet someone"
+author: "octocat@github.com"
+
 inputs:
-  arg-spec:
-    description: 'a YAML formatted file that includes arguments for gcloud firebase test run command.'
+  SAUCELABS_USERNAME:
+    description: "Your Sauce Labs Username as a secret"
     required: true
+  SAUCELABS_ACCESS_KEY:
+    description: "Your Sauce Labs Access Key as a secret"
+    required: true
+  APK_PATH:
+    description: "The Application APK Path"
+    required: true
+  TEST_APK_PATH:
+    description: "The Test APK Path"
+    required: true
+  DATA_CENTER:
+    description: "The Data Center name"
+    required: true
+    default: "eu-central-1"
+  DEVICE_NAME:
+      description: "The Data Center name"
+      required: true
+      default: "Google Pixel GoogleAPI Emulator,platformVersion=7.0"
+
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.arg-spec }}
+  using: "docker"
+  image: "Dockerfile"
+
 branding:
-  icon: 'check-square'
-  color: 'blue'
+  icon: "mic"
+  color: "blue"
