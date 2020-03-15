@@ -62,7 +62,7 @@ name: Android CI
 on: [push]
 
 jobs:
-  hello_world_job:
+  Sauce Labs App Automate:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
