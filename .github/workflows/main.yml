@@ -12,4 +12,10 @@ jobs:
         uses: ./saucelabs-action # Uses an action in the root directory
         id: hello
         with:
-          test_var: 'Mona the Octocat'
+          apk_path: 'app'
+          test_apk_path: 'test app'
+          device_name: 'Google Pixel GoogleAPI Emulator,platformVersion=7.0'
+          data_center: 'eu-central-1'
+        env:
+          SAUCELABS_ACCESS_KEY: ${{ secrets.SAUCELABS_ACCESS_KEY }}
+          SAUCELABS_USERNAME: ${{ secrets.SAUCELABS_USERNAME }}
