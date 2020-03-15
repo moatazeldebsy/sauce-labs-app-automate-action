@@ -12,8 +12,8 @@ jobs:
         uses: ./saucelabs-action # Uses an action in the root directory
         id: hello
         with:
-          apk_path: 'app'
-          test_apk_path: 'test app'
+          apk_path: 'app-debug.apk'
+          test_apk_path: 'app-debug-androidTest.apk'
           device_name: 'Google Pixel GoogleAPI Emulator,platformVersion=7.0'
           data_center: 'eu-central-1'
         env:
