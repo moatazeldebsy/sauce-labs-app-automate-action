@@ -46,7 +46,7 @@ jobs:
         with:
           arg-spec: 'tests.yml:android'
         env:
-          SAUCE_LABS_USERNAME: ${{ secrets.SAUCE_LABS_USERNAME }}
+          SAUCELABS_USERNAME: ${{ secrets.SAUCELABS_USERNAME }}
           SAUCELABS_ACCESS_KEY: ${{ secrets.SAUCELABS_ACCESS_KEY }}
 ```
 
