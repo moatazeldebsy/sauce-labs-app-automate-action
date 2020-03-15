@@ -1,6 +1,4 @@
-# saucelabs-githubactions-app-automate
-
-# Firebase Test Lab GitHub Action
+# Sauce Labs App Automate Github Actions 
 
 
 A GitHub Action to test mobile applications (Android) using Sauce Labs App Automate.
