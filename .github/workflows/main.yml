@@ -12,4 +12,4 @@ jobs:
         uses: ./saucelabs-action # Uses an action in the root directory
         id: hello
         with:
-          who-to-greet: 'Mona the Octocat'
+          INPUT_TEST_VAR: 'Mona the Octocat'
