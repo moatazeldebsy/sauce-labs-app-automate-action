@@ -49,6 +49,19 @@ jobs:
           SAUCE_LABS_ACCESS_KEY: ${{ secrets.SERVICE_ACCOUNT }}
 ```
 
+tests.yml:
+```
+android-pixel-4:
+  type: instrumentation
+  app: app-debug.apk
+  test: app-debug-test.apk
+  device:
+    - model: flame
+      version: 29
+      locale: 'en'
+      orientation: portrait
+```
+
 <br>
 
 The following usage comes with additional instructions regarding the input and environment variables that can be found in the [Simple Usage Documentation](/docs/SIMPLE_USAGE.md).
