@@ -23,8 +23,9 @@ runs:
   args:
     - ${{ inputs.apk_path }}
     - ${{ inputs.test_apk_path }}
-    - ${{ inputs.data_center }}
     - ${{ inputs.device_name }}
+    - ${{ inputs.data_center }}
+
 
 branding:
   icon: "mic"
