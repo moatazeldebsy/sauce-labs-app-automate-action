@@ -6,6 +6,7 @@ inputs:
   apk_path:
     description: "The Application APK Path"
     required: true
+    default: ""
   test_apk_path:
     description: "The Test APK Path"
     required: true
@@ -22,10 +23,6 @@ runs:
   image: "Dockerfile"
   args:
     - ${{ inputs.apk_path }}
-    - ${{ inputs.test_apk_path }}
-    - ${{ inputs.device_name }}
-    - ${{ inputs.data_center }}
-
 
 branding:
   icon: "mic"
