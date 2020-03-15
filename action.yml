@@ -1,22 +1,27 @@
-name: "Sauce Labs "
-description: "Greet someone"
-author: "octocat@github.com"
+name: "Sauce Labs App Automate"
+description: "A GitHub Action to test mobile applications (Android) using Sauce Labs App Automate"
+author: "Moataz Nabil"
 
 inputs:
-  APK_PATH:
+  apk_path:
     description: "The Application APK Path"
     required: true
-  TEST_APK_PATH:
+  test_apk_path:
     description: "The Test APK Path"
     required: true
-  DATA_CENTER:
+  data_center:
     description: "The Data Center name"
     required: true
     default: "eu-central-1"
-  DEVICE_NAME:
+  device_name:
       description: "The Data Center name"
       required: true
       default: "Google Pixel GoogleAPI Emulator,platformVersion=7.0"
+ args:
+    - ${{ inputs.apk_path }}
+    - ${{ inputs.test_apk_path }}
+    - ${{ inputs.data_center }}
+    - ${{ inputs.device_name }}
 
 runs:
   using: "docker"
@@ -24,4 +29,4 @@ runs:
 
 branding:
   icon: "mic"
-  color: "blue"
+  color: "purple"
