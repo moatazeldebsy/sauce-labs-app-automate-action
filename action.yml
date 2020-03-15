@@ -2,16 +2,29 @@ name: "Sauce Labs App Automate"
 description: "A GitHub Action to test mobile applications (Android) using Sauce Labs App Automate"
 author: "Moataz Nabil"
 
-
- args:
+inputs:
+  apk_path:
+    description: "The Application APK Path"
+    required: true
+  test_apk_path:
+    description: "The Test APK Path"
+    required: true
+  data_center:
+    description: "The Data Center name"
+    required: true
+    default: "eu-central-1"
+  device_name:
+      description: "The Data Center name"
+      required: true
+      default: "Google Pixel GoogleAPI Emulator,platformVersion=7.0"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
     - ${{ inputs.apk_path }}
     - ${{ inputs.test_apk_path }}
     - ${{ inputs.data_center }}
     - ${{ inputs.device_name }}
-
-runs:
-  using: "docker"
-  image: "Dockerfile"
 
 branding:
   icon: "mic"
