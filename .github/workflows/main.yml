@@ -8,4 +8,10 @@ jobs:
       - uses: actions/checkout@v1
       - uses: ./saucelabs-action
         with:
-          MY_NAME: "Mona"
+          APK_PATH: ""
+          TEST_APK_PATH: ""
+          DATA_CENTER: "eu-central-1"
+          DEVICE_NAME: "Google Pixel GoogleAPI Emulator,platformVersion=7.0"
+        env:
+          SAUCELABS_USERNAME: ${{ secrets.SAUCELABS_USERNAME }}
+          SAUCELABS_ACCESS_KEY: ${{ secrets.SAUCELABS_ACCESS_KEY }}
