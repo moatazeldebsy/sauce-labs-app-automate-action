@@ -3,12 +3,6 @@ description: "Greet someone"
 author: "octocat@github.com"
 
 inputs:
-  SAUCELABS_USERNAME:
-    description: "Your Sauce Labs Username as a secret"
-    required: true
-  SAUCELABS_ACCESS_KEY:
-    description: "Your Sauce Labs Access Key as a secret"
-    required: true
   APK_PATH:
     description: "The Application APK Path"
     required: true
