@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 echo "Downloading Saucelabs Runner for Virtual Devices"
-
+sudo apt-get install wget
 wget https://saucelabs.com/downloads/sauce-runner-virtual-0.1.1-linux.zip
 
 unzip sauce-runner-virtual-0.1.1-linux.zip
