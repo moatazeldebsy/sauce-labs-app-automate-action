@@ -12,14 +12,14 @@ Sauce Labs offers the ability to run tests using a native framework such as Espr
 
 <br>
 
-
 ## Pre-requisites
 
-1. `Sauce Labs Access Key`: A service account is a special kind of account with specific permissions to authenticate with the Cloud Platform when used on a virtual machine for continuous integration.
-
-2. `ARG SPEC File`: A YAML argument file that lists out all of the configurations for Sauce Labs Runner. In this file, you can specify the APK, test APK , select virtual devices , the data center location and indicate the type of test to perform.
+1. `Sauce Labs Access Key` 
+2. `Sauce Labs Username` 
+3. Application `APK` and `Test APK`
 
 <br>
+
 ## What is Sauce Labs?
 
 The world's largest continuous testing cloud of web and mobile applications. Access web browsers, mobile emulators, simulators, and real mobile devices.
@@ -42,9 +42,9 @@ Start testing today on thousands of `browser/OS` platform combinations, `EMU/SIM
 * 2 concurrent sessions on the Virtual Device Cloud
 * 100 minutes of automated testing
 
-## The purpose of the integration between Bitrise and SauceLabs
+## The purpose of the integration between GitHub Actions and SauceLabs
 
-If you are writing mobile test automation scripts for your `Android` app using the native tool `Espresso` and you need to run your tests with different `OS` and `versions` on different simulators with `Bitrise`, So you need to think about how can I run these tests, if you start thinking about implementing your device lab it will be a headache and will not give the value that you looking for, So you need to think about alternate solution that supports you with different devices, OS and versions. one of these solutions is SauceLabs
+If you are writing mobile test automation scripts for your `Android` app using the native tool `Espresso` and you need to run your tests with different `OS` and `versions` on different simulators with `Sauce Labs`, So you need to think about how can I run these tests, if you start thinking about implementing your device lab it will be a headache and will not give the value that you looking for, So you need to think about alternate solution that supports you with different devices, OS and versions. one of these solutions is SauceLabs
 
 `Sauce Labs` offers the ability to run tests using a native framework such as Espresso on virtual devices using the `Sauce Runner for Virtual Devices`.
 
@@ -55,6 +55,7 @@ Before implementing this step to use `SauceLab Runner` you need to create your c
 But with the step, all that you need is to add the step in your workflow and select your preferred device.
 
 ## Usage
+
 workflows/main.yml:
 ```
 name: Android CI
@@ -80,23 +81,12 @@ jobs:
           SAUCELABS_USERNAME: ${{ secrets.SAUCELABS_USERNAME }}
 ```
 
-<br>
-
-The following usage comes with additional instructions regarding the input and environment variables that can be found in the [Simple Usage Documentation](/docs/SIMPLE_USAGE.md).
-
-Currently, this GitHub Action only runs Android tests. Support for iOS coming soon.
 
 <br>
 
 ## Inputs
 
-#### `arg-spec`
-
-YAML file that contains configuration for Firebase Test Lab. Format must be ARG_FILE:ARG_GROUP_NAME. **Required**
-
-#### `SERVICE_ACCOUNT`
-
-Copy-paste the content of the JSON-formatted service account file in GitHub's secret variables in settings. **Required**
+TBD.....
 
 <br>
 
@@ -106,6 +96,7 @@ Copy-paste the content of the JSON-formatted service account file in GitHub's se
 - Run with Sauce Labs tunnel 
 
 <br>
+
 ## Contributing
 
 Are you facing an issue? Have some questions? Would like to implement a new feature? Learn more about our [contributing guidelines](CONTRIBUTING.md).
