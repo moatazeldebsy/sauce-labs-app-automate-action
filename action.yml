@@ -3,16 +3,16 @@ description: "A GitHub Action to test mobile applications (Android) using Sauce 
 author: "Moataz Nabil"
 
 inputs:
-  apk_path:
-    description: "The Application APK Path"
+  who-to-greet:  # id of input
+    description: 'Who to greet'
     required: true
-    default: "World"
+    default: 'World'
 
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.apk_path }}
+    - ${{ inputs.who-to-greet }}
 
 branding:
   icon: "mic"

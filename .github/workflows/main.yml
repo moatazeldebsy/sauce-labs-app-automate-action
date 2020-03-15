@@ -9,10 +9,4 @@ jobs:
       - uses: ./saucelabs-action
         id: hello
         with:
-          apk_path: 'Mona the Octocat'
-          test_apk_path: 'Mona the Octocat'
-          data_center: 'eu-central-1'
-          device_name: 'Google Pixel GoogleAPI Emulator,platformVersion=7.0'
-        env:
-          SAUCELABS_USERNAME: ${{ secrets.SAUCELABS_USERNAME }}
-          SAUCELABS_ACCESS_KEY: ${{ secrets.SAUCELABS_ACCESS_KEY }}
+          who-to-greet: 'Mona the Octocat'
