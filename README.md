@@ -3,9 +3,7 @@
 
 A `GitHub` Action to test mobile applications `Android` using `Sauce Labs` App Automate using `Sauce Runner`.
 
-<br>
-
-Inspired by the 2020 [GitHub Actions Hackathon.](https://githubhackathon.com/)
+Powered by the 2020 [GitHub Actions Hackathon.](https://githubhackathon.com/)
 
 <br>
 
