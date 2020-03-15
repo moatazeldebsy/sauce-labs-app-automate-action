@@ -1,0 +1,25 @@
+name: 'Sauce Labs App Automate Action'
+description: 'Run Mobile test automation for Android'
+inputs:
+  apk_path:
+    description: "The Test APK Path"
+    required: true
+  test_apk_path:
+    description: "The Test APK Path"
+    required: true
+  data_center:
+    description: "The Data Center name"
+    required: true
+    default: "eu-central-1"
+  device_name:
+    description: "The Data Center name"
+    required: true
+    default: "Google Pixel GoogleAPI Emulator,platformVersion=7.0"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.apk_path }}
+    - ${{ inputs.test_apk_path }}
+    - ${{ inputs.device_name }}
+    - ${{ inputs.data_center }}
