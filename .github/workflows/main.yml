@@ -1,12 +1,15 @@
-name: Test Workflow
-on: push
+on: [push]
+
 jobs:
-  build:
-    name: Hello world action
+  hello_world_job:
     runs-on: ubuntu-latest
+    name: A job to say hello
     steps:
-      - uses: actions/checkout@v1
-      - uses: ./saucelabs-action
+      # To use this repository's private action, you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Hello world action step
+        uses: ./saucelabs-action # Uses an action in the root directory
         id: hello
         with:
           who-to-greet: 'Mona the Octocat'

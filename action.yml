@@ -1,19 +1,15 @@
-name: "Sauce Labs App Automate"
-description: "A GitHub Action to test mobile applications (Android) using Sauce Labs App Automate"
-author: "Moataz Nabil"
-
+name: 'Hello World'
+description: 'Greet someone and record the time'
 inputs:
   who-to-greet:  # id of input
     description: 'Who to greet'
     required: true
     default: 'World'
-
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
 runs:
-  using: "docker"
-  image: "Dockerfile"
+  using: 'docker'
+  image: 'Dockerfile'
   args:
     - ${{ inputs.who-to-greet }}
-
-branding:
-  icon: "mic"
-  color: "purple"
