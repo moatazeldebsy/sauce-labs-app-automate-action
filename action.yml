@@ -6,18 +6,8 @@ inputs:
   apk_path:
     description: "The Application APK Path"
     required: true
-    default: ""
-  test_apk_path:
-    description: "The Test APK Path"
-    required: true
-  data_center:
-    description: "The Data Center name"
-    required: true
-    default: "eu-central-1"
-  device_name:
-      description: "The Data Center name"
-      required: true
-      default: "Google Pixel GoogleAPI Emulator,platformVersion=7.0"
+    default: "World"
+
 runs:
   using: "docker"
   image: "Dockerfile"
