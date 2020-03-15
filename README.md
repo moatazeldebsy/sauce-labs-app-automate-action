@@ -47,14 +47,14 @@ jobs:
           arg-spec: 'tests.yml:android'
         env:
           SAUCE_LABS_USERNAME: ${{ secrets.SAUCE_LABS_USERNAME }}
-          SAUCE_LABS_ACCESSKEY: ${{ secrets.SAUCE_LABS_ACCESSKEY }}
+          SAUCELABS_ACCESS_KEY: ${{ secrets.SAUCELABS_ACCESS_KEY }}
 ```
 
 tests.yml:
 ```
 android:
-  app: $BITRISE_APK_PATH
-  test: $BITRISE_TEST_APK_PATH
+  app: $APK_PATH
+  test: $TEST_APK_PATH
   saucelabs_data_center: {saucelabs_data_center}
   saucelabs_device_name: ${saucelabs_device_name}
 
