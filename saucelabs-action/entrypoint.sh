@@ -1,5 +1,5 @@
-#!/bin/bash
-set -ex
+#!/bin/sh -l
+echo "Hello $1"
 echo "Downloading Saucelabs Runner for Virtual Devices"
 
 wget https://saucelabs.com/downloads/sauce-runner-virtual-0.1.1-linux.zip
