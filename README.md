@@ -1,6 +1,6 @@
 # Sauce Labs App Automate Github Actions 
 
-[![Release](https://img.shields.io/github/release/asadmansr/Firebase-Test-Lab-Action.svg)](https://github.com/moatazeldebsy/sauce-labs-app-automate-action/releases)
+[![Release](https://img.shields.io/github/release/moatazeldebsy/sauce-labs-app-automate-action.svg)](https://github.com/moatazeldebsy/sauce-labs-app-automate-action/releases)
 [![Marketplace](https://img.shields.io/badge/GitHub-Marketplace-blue.svg)](https://github.com/marketplace/actions/sauce-labs-app-automate-action)
 
 A `GitHub` Action to test mobile applications `Android` using `Sauce Labs` App Automate using `Sauce Runner`.
