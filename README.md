@@ -55,7 +55,6 @@ Before implementing this step to use `SauceLab Runner` you need to create your c
 But with the step, all that you need is to add the step in your workflow and select your preferred device.
 
 ## Usage
-As a [GitHub Action][actionsUrl]:
 
 workflows/main.yml:
 
