@@ -72,7 +72,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Hello world action step
-        uses: moatazeldebsy/sauce-labs-app-automate-action@V1.0.0
+        uses: moatazeldebsy/sauce-labs-app-automate-action@V1.0.1
         id: sauceLabs Test
         with:
           apk_path: 'app/build/outputs/apk/debug/app-debug.apk'
@@ -84,8 +84,46 @@ jobs:
           SAUCELABS_USERNAME: ${{ secrets.SAUCELABS_USERNAME }}
 ```
 
-
 <br>
+
+## usage with Android Gradle to build your app
+
+workflow/android.yml:
+
+```yaml
+name: Android CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Build with Gradle
+      run: ./gradlew assemble assembleAndroidTest
+    - name: Sauce Labs App Automate Action
+      uses: moatazeldebsy/sauce-labs-app-automate-action@V1.0.1
+      with:
+        apk_path: 'app/build/outputs/apk/debug/app-debug.apk'
+        test_apk_path: 'app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk'
+        data_center: 'eu-central-1'
+        device_name: 'Google Pixel GoogleAPI Emulator,platformVersion=7.0'
+      env:
+          SAUCELABS_ACCESS_KEY: ${{ secrets.SAUCELABS_ACCESS_KEY }}
+          SAUCELABS_USERNAME: ${{ secrets.SAUCELABS_USERNAME }}
+
+```
 
 ## Inputs
 
