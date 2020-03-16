@@ -1,0 +1,20 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Sauce Labs App Automate
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Hello world action step
+        uses: moatazeldebsy/auce-labs-app-automate-action@V1.0.0
+        id: hello
+        with:
+          apk_path: 'app-debug.apk'
+          test_apk_path: 'app-debug-androidTest.apk'
+          device_name: 'Google Pixel GoogleAPI Emulator,platformVersion=7.0'
+          data_center: 'eu-central-1'
+        env:
+          SAUCELABS_ACCESS_KEY: ${{ secrets.SAUCELABS_ACCESS_KEY }}
+          SAUCELABS_USERNAME: ${{ secrets.SAUCELABS_USERNAME }}

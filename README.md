@@ -69,7 +69,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Hello world action step
-        uses: moatazeldebsy/auce-labs-app-automate-action@v1.0.0
+        uses: moatazeldebsy/auce-labs-app-automate-action@V1.0.0
         id: hello
         with:
           apk_path: 'app-debug.apk'
