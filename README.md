@@ -140,7 +140,7 @@ Learn how to create and store encrypted secrets on GitHub from [here](https://he
 
 <br>
 
-**Upcoming feature**
+### Upcoming features
 - Include/Exclude Tests
 - Run-on multiple devices
 - Run with Sauce Labs tunnel 
