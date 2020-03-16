@@ -86,7 +86,7 @@ jobs:
 
 <br>
 
-## usage with Android Gradle to build your app
+## Usage with Android Gradle to build your app
 
 workflow/android.yml:
 
