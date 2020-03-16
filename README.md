@@ -92,7 +92,7 @@ jobs:
 - device_name: The **virtual** device name and version from Sauce Labs for ex: (`Google Pixel GoogleAPI Emulator,platformVersion=7.0`)
 - data_center: The Sauce Labs data center that you need to run your tests with ex: (`eu-central-1,us-west-1 or headless-us-east`)
 
-env:
+#### env:
 - Sauce Labs Username: Your Username as an **environment variable** (`GitHub secret`)
 - Sauce Labs Access Key: Your Access Key as an **environment variable** (`GitHub secret`)
 
