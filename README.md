@@ -55,9 +55,11 @@ Before implementing this step to use `SauceLab Runner` you need to create your c
 But with the step, all that you need is to add the step in your workflow and select your preferred device.
 
 ## Usage
+As a [GitHub Action][actionsUrl]:
 
 workflows/main.yml:
-```
+
+```yaml
 name: Android CI
 on: [push]
 
@@ -69,11 +71,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Hello world action step
-        uses: moatazeldebsy/auce-labs-app-automate-action@V1.0.0
-        id: hello
+        uses: moatazeldebsy/sauce-labs-app-automate-action@V1.0.0
+        id: sauceLabs Test
         with:
-          apk_path: 'app-debug.apk'
-          test_apk_path: 'app-debug-androidTest.apk'
+          apk_path: 'path/to/app-debug.apk'
+          test_apk_path: 'path/to/app-debug-androidTest.apk'
           device_name: 'Google Pixel GoogleAPI Emulator,platformVersion=7.0'
           data_center: 'eu-central-1'
         env:
@@ -86,7 +88,12 @@ jobs:
 
 ## Inputs
 
-TBD.....
+- apk_path:  The path for your application APK for ex: (`path/to/app-debug.apk`)
+- test_apk_path: The path for your test APK for ex: (`path/to/app-debug-androidTest.apk`)
+- device_name: The **virtual** device name and version from Sauce Labs for ex: (`Google Pixel GoogleAPI Emulator,platformVersion=7.0`)
+- data_center: The Sauce Labs data center that you need to run your tests with ex: (`eu-central-1,us-west-1 or headless-us-east`)
+- Sauce Labs Username: Your Username as an **environment variable** (`GitHub secret`)
+- Sauce Labs Access Key: Your Access Key as an **environment variable** (`GitHub secret`)
 
 <br>
 
