@@ -91,8 +91,12 @@ jobs:
 - test_apk_path: The path for your test APK for ex: (`path/to/app-debug-androidTest.apk`)
 - device_name: The **virtual** device name and version from Sauce Labs for ex: (`Google Pixel GoogleAPI Emulator,platformVersion=7.0`)
 - data_center: The Sauce Labs data center that you need to run your tests with ex: (`eu-central-1,us-west-1 or headless-us-east`)
+
+env:
 - Sauce Labs Username: Your Username as an **environment variable** (`GitHub secret`)
 - Sauce Labs Access Key: Your Access Key as an **environment variable** (`GitHub secret`)
+
+Learn how to create and store encrypted secrets on GitHub from [here](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets)
 
 <br>
 
