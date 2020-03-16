@@ -1,5 +1,7 @@
 # Sauce Labs App Automate Github Actions 
 
+[![Release](https://img.shields.io/github/release/asadmansr/Firebase-Test-Lab-Action.svg)](https://github.com/asadmansr/Firebase-Test-Lab-Action/releases)
+[![Marketplace](https://img.shields.io/badge/GitHub-Marketplace-blue.svg)](https://github.com/marketplace/actions/firebase-test-lab-action)
 
 A `GitHub` Action to test mobile applications `Android` using `Sauce Labs` App Automate using `Sauce Runner`.
 
@@ -73,8 +75,8 @@ jobs:
         uses: moatazeldebsy/sauce-labs-app-automate-action@V1.0.0
         id: sauceLabs Test
         with:
-          apk_path: 'path/to/app-debug.apk'
-          test_apk_path: 'path/to/app-debug-androidTest.apk'
+          apk_path: 'app/build/outputs/apk/debug/app-debug.apk'
+          test_apk_path: 'app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk'
           device_name: 'Google Pixel GoogleAPI Emulator,platformVersion=7.0'
           data_center: 'eu-central-1'
         env:
