@@ -5,7 +5,7 @@
 
 A `GitHub` Action for running `Espresso` Tests for `Android` using `Sauce Labs Runner`
 
-Powered by the 2020 [GitHub Actions Hackathon.](https://githubhackathon.com/)
+Inspired by the 2020 [GitHub Actions Hackathon.](https://githubhackathon.com/)
 
 <br>
 
