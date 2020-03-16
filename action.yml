@@ -23,3 +23,6 @@ runs:
     - ${{ inputs.test_apk_path }}
     - ${{ inputs.device_name }}
     - ${{ inputs.data_center }}
+branding:
+  icon: check
+  color: red
